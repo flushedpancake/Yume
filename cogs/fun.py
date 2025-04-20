@@ -39,32 +39,38 @@ class Fun(commands.Cog):
         await interaction.response.send_message(text[::-1])
 
     # Roll
-    @app_commands.command(name='roll', description='Rolls a random value to you...')
+    @app_commands.command(name='roll', description='Roll some points. Score is not tracked.')
     async def roll(self, interaction: discord.Interaction):
 
-        points = random.randint(0, 1000)
+        points = random.randint(0, 2147483647)
 
         if points == 727:
             await interaction.response.send_message(f'**{points}!! WYSI!! WYFSI!!!!!**')
 
-        await interaction.response.send_message(f"You've got **{points}** points! what do you think?? wanna try again?")
+        if points == 4000:
+            await interaction.response.send_message(f'Q U A T R O   M I L   P O N T O S.')
+        
+        if points == 2147483647:
+            await interaction.response.send_message(f'You maxed out the 32-bit signed integer limit with **{points}** points!')
+           
+        await interaction.response.send_message(f"You rolled **{points}** points. Yume is always happy to roll for you at any time~")
 
     # 8Ball
-    @app_commands.command(name='8ball', description='Let the almighty 8Ball answer your questions~')
+    @app_commands.command(name='8ball', description='Let the almighty 8-ball answer your questions~!')
     async def eightball(self, interaction: discord.Interaction, *, question: str):
 
         answers = random.choice(open('./texts/8ball.txt').read().splitlines())
         await interaction.response.send_message(answers)
 
     # Uwuify
-    @app_commands.command(name='uwuify', description='it makes you s-s-speak w-wike (˘ε˘) t-t-t-this?!?!')
+    @app_commands.command(name='uwuify', description='i-it makes you s-s-speak w-wike (˘ε˘) t-t-t-this?!?! >/////<')
     async def uwuify(self, interaction: discord.Interaction, *, phrase: str):
 
         uwu = Uwuipy(None, 0.3, 0.3, 0.10, 1, False, 4)
         await interaction.response.send_message(uwu.uwuify(phrase))
 
     # Twitter Personality
-    @app_commands.command(name='twitter-personality', description='an AI generated personality of a twitter profile')
+    @app_commands.command(name='twitter-personality', description='An AI generated personality of an X profile.')
     async def twt_persona(self, interaction: discord.Interaction, *, twitter_handle: str):
 
         helpers.profile = twitter_handle
@@ -77,8 +83,11 @@ class Fun(commands.Cog):
         await interaction.response.send_message(embed=embed)
 
     # Twitter Compatibility
+    @app_commands.command(name='twitter-compatibility', description="----")
+
 
     # Ship
+    @app_commands.command(name='ship', description="----")
 
 
 # Realiza o registro da classe nos cogs

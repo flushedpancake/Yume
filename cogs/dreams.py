@@ -18,26 +18,26 @@ class Dreams(commands.GroupCog, name='yume'):
         print('Yume is currently dreaming....')
 
     # Verify
-    @app_commands.command(name='status', description="Check if everything is fine with me...")
+    @app_commands.command(name='status', description="Check if I'm doing okay...")
     async def verify(self, interaction: discord.Interaction):
 
-        await interaction.response.send_message('Everything seems fine~', ephemeral=True)
+        await interaction.response.send_message('Everything seems fine! Thanks for checking up on Yume~ <3', ephemeral=True)
 
     # Information
-    @app_commands.command(name='info', description="Yume's useful things and links")
+    @app_commands.command(name='info', description="Yume's information, links, etc.")
     async def info(self, interaction: discord.Interaction):
 
         await interaction.response.send_message(embed=InfoEmbed.iembed, ephemeral=True)
 
     # Typo Report
-    @app_commands.command(name='typo', description="A way to report any typos you've found so far!")
+    @app_commands.command(name='typo', description="Report any typos in commands here...")
     async def typo(self, interaction: discord.Interaction):
 
         typo = modals.TypoModal()
         await interaction.response.send_modal(typo)
 
     # Suggestions
-    @app_commands.command(name='suggestion', description="With this command you can give Yume your suggestions!")
+    @app_commands.command(name='suggestion', description="Give Yume's developer your suggestions!")
     async def suggestion(self, interaction: discord.Interaction):
 
         suggestion = modals.SuggestionModal()
