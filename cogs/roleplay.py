@@ -15,7 +15,7 @@ class RolePlay(commands.GroupCog, name='rp'):
     # Avisa quando a classe cog iniciar
     @commands.Cog.listener()
     async def on_ready(self):
-        print('Roleplay is ready!')
+        print('Roleplay is Ready!')
 
     # hug
     @app_commands.command(name='hug', description='Give a hug to someone!')
@@ -26,17 +26,18 @@ class RolePlay(commands.GroupCog, name='rp'):
         buttons.pinged_one = user.mention
 
         RpEmbed.embed.set_image(url=str(await helpers.nekos_best()))
-        RpEmbed.embed.set_footer(text='Just lovely!!!')
+        RpEmbed.embed.set_footer(text='Squishy squashy hugs, yay!')
 
         if user == interaction.user:
-            RpEmbed.embed.set_author(name="Feeling Lonely? Come here, Yume is gonna hug you~ ❤️")
+            RpEmbed.embed.set_footer(text="Snuggie snuggie snuggie :3")
+            RpEmbed.embed.set_author(name="Aww... come here, Yume is gonna hug you~ ❤") # Does this convert emoji text or is it limited to direct Unicode input? --flushedpancake
             await interaction.response.send_message(embed=RpEmbed.embed)
 
-        RpEmbed.embed.set_author(name=f"{interaction.user.display_name} just hugged {user.display_name}!")
+        RpEmbed.embed.set_author(name=f"{interaction.user.display_name} just hugged {user.display_name}! ❤️❤️❤️")
         await interaction.response.send_message(embed=RpEmbed.embed, view=view)
 
     # slap
-    @app_commands.command(name='slap', description='Slaps someone')
+    @app_commands.command(name='slap', description='Slaps someone.')
     async def slap(self, interaction: discord.Interaction, *, user: discord.Member):
 
         helpers.nekos_gif = 'slap'
@@ -44,13 +45,14 @@ class RolePlay(commands.GroupCog, name='rp'):
         buttons.pinged_one = user.mention
 
         RpEmbed.embed.set_image(url=str(await helpers.nekos_best()))
-        RpEmbed.embed.set_footer(text='That was funny... hehe~')
+        RpEmbed.embed.set_footer(text='I wonder what happened between them?')
 
         if user == interaction.user:
-            RpEmbed.embed.set_author(name="If you insist... i'm so sorry...")
+            RpEmbed.embed.set_footer(text="I didn't want to hurt you...")
+            RpEmbed.embed.set_author(name="If you insist... I'm so, so sorry...")
             await interaction.response.send_message(embed=RpEmbed.embed)
 
-        RpEmbed.embed.set_author(name=f"{interaction.user.display_name} slapped {user.display_name}! I wonder what happened...")
+        RpEmbed.embed.set_author(name=f"{interaction.user.display_name} slapped {user.display_name}! Ouch!")
         await interaction.response.send_message(embed=RpEmbed.embed, view=view)
 
     # kiss
@@ -62,17 +64,18 @@ class RolePlay(commands.GroupCog, name='rp'):
         buttons.pinged_one = user.mention
 
         RpEmbed.embed.set_image(url=str(await helpers.nekos_best()))
-        RpEmbed.embed.set_footer(text='It was really cute!')
+        RpEmbed.embed.set_footer(text='So romantic... This is making Yume\'s heart flutter <3')
 
         if user == interaction.user:
-            RpEmbed.embed.set_author(name="Awwnn... Come here, Yume is gonna give you a kiss!")
+            RpEmbed.embed.set_footer(text="This... feels like more... than... a dream could wish...")
+            RpEmbed.embed.set_author(name="Aww... Come here, Yume is gonna give you a kiss!")
             await interaction.response.send_message(embed=RpEmbed.embed)
 
-        RpEmbed.embed.set_author(name=f"{interaction.user.display_name} just kissed {user.display_name}! In front of everyone!")
+        RpEmbed.embed.set_author(name=f"{interaction.user.display_name} just kissed {user.display_name}! ❤️❤️❤️")
         await interaction.response.send_message(embed=RpEmbed.embed, view=view)
 
     # pat
-    @app_commands.command(name='pat', description='You can pat someone')
+    @app_commands.command(name='pat', description='Give someone a pat')
     async def pat(self, interaction: discord.Interaction, *, user: discord.Member):
 
         helpers.nekos_gif = 'pat'
@@ -80,17 +83,18 @@ class RolePlay(commands.GroupCog, name='rp'):
         buttons.pinged_one = user.mention
 
         RpEmbed.embed.set_image(url=str(await helpers.nekos_best()))
-        RpEmbed.embed.set_footer(text='Everyone should receive a little pat!')
+        RpEmbed.embed.set_footer(text='Everybody deserves a little pat!')
 
         if user == interaction.user:
-            RpEmbed.embed.set_author(name="Seems that you are lonely... I'm gonna pat you, don't worry!")
+            RpEmbed.embed.set_footer(text="Aww, you're like a cute puppy.")
+            RpEmbed.embed.set_author(name="You want Yume's patpats? Sure!! hehe~")
             await interaction.response.send_message(embed=RpEmbed.embed)
 
         RpEmbed.embed.set_author(name=f"{interaction.user.display_name} is patting {user.display_name}! ❤️")
         await interaction.response.send_message(embed=RpEmbed.embed, view=view)
 
     # bite
-    @app_commands.command(name='bite', description='Bites someone, just make sure to not hurt them')
+    @app_commands.command(name='bite', description='Bites someone.')
     async def bite(self, interaction: discord.Interaction, *, user: discord.Member):
 
         helpers.nekos_gif = 'bite'
@@ -98,17 +102,18 @@ class RolePlay(commands.GroupCog, name='rp'):
         buttons.pinged_one = user.mention
 
         RpEmbed.embed.set_image(url=str(await helpers.nekos_best()))
-        RpEmbed.embed.set_footer(text='Does it hurt? Maybe it was too strong?')
+        RpEmbed.embed.set_footer(text='I hope that didn\'t hurt too much...')
 
         if user == interaction.user:
-            RpEmbed.embed.set_author(name="I'm gonna bite you then.... Kinda chewy.....")
+            RpEmbed.embed.set_footer(text="Was that meant to be a love bite?")
+            RpEmbed.embed.set_author(name="You want me to bite you? Um, okay...")
             await interaction.response.send_message(embed=RpEmbed.embed)
 
-        RpEmbed.embed.set_author(name=f"{interaction.user.display_name} is biting {user.display_name}, why??")
+        RpEmbed.embed.set_author(name=f"{interaction.user.display_name} is biting {user.display_name}...")
         await interaction.response.send_message(embed=RpEmbed.embed, view=view)
 
     # stare
-    @app_commands.command(name='stare', description='Just... stare at someone for no reason')
+    @app_commands.command(name='stare', description='Just... stare at someone for no reason.')
     async def stare(self, interaction: discord.Interaction, *, user: discord.Member):
 
         helpers.nekos_gif = 'stare'
@@ -116,17 +121,18 @@ class RolePlay(commands.GroupCog, name='rp'):
         buttons.pinged_one = user.mention
 
         RpEmbed.embed.set_image(url=str(await helpers.nekos_best()))
-        RpEmbed.embed.set_footer(text='Be careful not to stare for too long - they might notice!')
+        RpEmbed.embed.set_footer(text='Don\'t trigger the sixth sense by staring too long...')
 
         if user == interaction.user:
+            RpEmbed.embed.set_footer(text="Are you enjoying the staring contest?")
             RpEmbed.embed.set_author(name="I'm gonna stare at you then... please don't look away!")
             await interaction.response.send_message(embed=RpEmbed.embed)
 
-        RpEmbed.embed.set_author(name=f"{interaction.user.display_name} is staring at {user.display_name}.....")
+        RpEmbed.embed.set_author(name=f"{interaction.user.display_name} is staring at {user.display_name}...")
         await interaction.response.send_message(embed=RpEmbed.embed, view=view)
 
     # shoot
-    @app_commands.command(name='shoot', description='Shoots a user, careful to not kill them')
+    @app_commands.command(name='shoot', description='Shoots a user.')
     async def shoot(self, interaction: discord.Interaction, *, user: discord.Member):
 
         helpers.nekos_gif = 'shoot'
@@ -137,10 +143,11 @@ class RolePlay(commands.GroupCog, name='rp'):
         RpEmbed.embed.set_footer(text="Oh my God, are you okay? I'm calling an ambulance, stay strong, please!")
 
         if user == interaction.user:
+            RpEmbed.embed.set_footer(text="Was listening to the user command the right thing to do here...?")
             RpEmbed.embed.set_author(name="Suuuree.... hehe~")
             await interaction.response.send_message(embed=RpEmbed.embed)
 
-        RpEmbed.embed.set_author(name=f"{user.display_name} just got shot by {interaction.user.display_name}!!! Should we call the police?")
+        RpEmbed.embed.set_author(name=f"{user.display_name} just got shot by {interaction.user.display_name}!")
         await interaction.response.send_message(embed=RpEmbed.embed, view=view)
 
     # punch
@@ -152,17 +159,18 @@ class RolePlay(commands.GroupCog, name='rp'):
         buttons.pinged_one = user.mention
 
         RpEmbed.embed.set_image(url=str(await helpers.nekos_best()))
-        RpEmbed.embed.set_footer(text='That actually might have been painful, I guess?')
+        RpEmbed.embed.set_footer(text='Ow... that actually might have been painful...')
 
         if user == interaction.user:
-            RpEmbed.embed.set_author(name="I usually don't like punching people, but since you asked so nicely~")
+            RpEmbed.embed.set_footer(text="Where did that energy even come from?")
+            RpEmbed.embed.set_author(name="I usually don't like punching people, but since you asked so nicely...")
             await interaction.response.send_message(embed=RpEmbed.embed)
 
         RpEmbed.embed.set_author(name=f"{interaction.user.display_name} punched {user.display_name}, how strong was it..?")
         await interaction.response.send_message(embed=RpEmbed.embed, view=view)
 
     # poke
-    @app_commands.command(name='poke', description='Pokes another user, if you want to')
+    @app_commands.command(name='poke', description='Pokes another user.')
     async def poke(self, interaction: discord.Interaction, *, user: discord.Member):
 
         helpers.nekos_gif = 'poke'
@@ -170,7 +178,7 @@ class RolePlay(commands.GroupCog, name='rp'):
         buttons.pinged_one = user.mention
 
         RpEmbed.embed.set_image(url=str(await helpers.nekos_best()))
-        RpEmbed.embed.set_footer(text='Is it annoying to keep poking people?')
+        RpEmbed.embed.set_footer(text='POKE 53280, PEEK(53281)') # I am so fucking sorry -- flushedpancake
 
         if user == interaction.user:
             RpEmbed.embed.set_author(name="Yume likes poking others, come here!!!")
@@ -180,7 +188,7 @@ class RolePlay(commands.GroupCog, name='rp'):
         await interaction.response.send_message(embed=RpEmbed.embed, view=view)
 
     # cuddle
-    @app_commands.command(name='cuddle', description='Stop being annoying, cuddle with someone instead')
+    @app_commands.command(name='cuddle', description='Cuddle with someone!')
     async def cuddle(self, interaction: discord.Interaction, *, user: discord.Member):
 
         helpers.nekos_gif = 'cuddle'
@@ -188,20 +196,25 @@ class RolePlay(commands.GroupCog, name='rp'):
         buttons.pinged_one = user.mention
 
         RpEmbed.embed.set_image(url=str(await helpers.nekos_best()))
-        RpEmbed.embed.set_footer(text="That's the sweetest thing i've seen~")
+        RpEmbed.embed.set_footer(text="A warm cuddle makes everything better!")
 
         if user == interaction.user:
-            RpEmbed.embed.set_author(name="Seems like you are always lonely, huh? Come here, cutie!")
+            RpEmbed.embed.set_author(name="You want Yume cuddles?! Come here, cutie!")
             await interaction.response.send_message(embed=RpEmbed.embed)
 
         RpEmbed.embed.set_author(name=f"{interaction.user.display_name} is cuddling with {user.display_name}, do not interrupt them!")
         await interaction.response.send_message(embed=RpEmbed.embed, view=view)
 
     # lick
+    @app_commands.command(name='lick', description="----")
 
     # stomp
+    @app_commands.command(name='stomp', description="----")
+
 
     # boop
+    @app_commands.command(name='boop', description="----")
+
 
 
 # Realiza o registro da classe nos cogs

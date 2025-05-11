@@ -17,7 +17,7 @@ class Image(commands.Cog):
         print('Image is Ready!')
 
     # Reddit
-    @app_commands.command(name='reddit', description='Gets a image from the chosen subreddit')
+    @app_commands.command(name='reddit', description='Gets an image from the chosen subreddit')
     async def reddit(self, interaction: discord.Interaction, *, subreddit: str):
 
         helpers.sub_reddit = subreddit
@@ -54,7 +54,7 @@ class Image(commands.Cog):
     async def dog(self, interaction: discord.Interaction):
 
         ImgEmbed.embed.set_image(url=f"{await helpers.doggy_finder()}")
-        ImgEmbed.embed.set_author(name="Here's the doggy I've got for you!! Hope you like it~")
+        ImgEmbed.embed.set_author(name="Arf, arf! Here's the doggy I've got for you!!")
 
         await interaction.response.send_message(embed=ImgEmbed.embed)
 
@@ -63,42 +63,42 @@ class Image(commands.Cog):
     async def cat(self, interaction: discord.Interaction):
 
         ImgEmbed.embed.set_image(url=f"{await helpers.kitty_finder()}")
-        ImgEmbed.embed.set_author(name="Here's the kitty I've got for you!! Hope you like it~")
+        ImgEmbed.embed.set_author(name="Meow, meow! Here's the kitty I've got for you!!")
 
         await interaction.response.send_message(embed=ImgEmbed.embed)
 
     # Waifus
-    @app_commands.command(name="waifu", description="I'll give you a random image of a waifu")
+    @app_commands.command(name="waifu", description="I'll give you a random image of a waifu!")
     async def waifu(self, interaction: discord.Interaction):
 
         helpers.nekos_gif = 'waifu'
         ImgEmbed.embed.set_image(url = await helpers.nekos_best())
-        ImgEmbed.embed.set_author(name="Here's the waifu Yume got for you!!")
+        ImgEmbed.embed.set_author(name="Here's the waifu Yume got for you!")
 
         await interaction.response.send_message(embed=ImgEmbed.embed)
 
     # Husbandos
-    @app_commands.command(name="husbando", description="I'll give you a random image of a husbando")
+    @app_commands.command(name="husbando", description="I'll give you a random image of a husbando!")
     async def husbando(self, interaction: discord.Interaction):
 
         helpers.nekos_gif = 'husbando'
         ImgEmbed.embed.set_image(url=await helpers.nekos_best())
-        ImgEmbed.embed.set_author(name="Here's the husbando Yume got for you!!")
+        ImgEmbed.embed.set_author(name="Here's the husbando Yume got for you!")
 
         await interaction.response.send_message(embed=ImgEmbed.embed)
 
     # Nekos
-    @app_commands.command(name="neko", description="I'll give you a cute random image of a catgirl!")
+    @app_commands.command(name="neko", description="I'll give you a random image of a catgirl!")
     async def neko(self, interaction: discord.Interaction):
 
         helpers.nekos_gif = 'neko'
         ImgEmbed.embed.set_image(url=await helpers.nekos_best())
-        ImgEmbed.embed.set_author(name="Here's the neko Yume got for you!!")
+        ImgEmbed.embed.set_author(name="Here's the nekomimi Yume got for you!!")
 
         await interaction.response.send_message(embed=ImgEmbed.embed)
 
     # Kitsunes
-    @app_commands.command(name="kitsune", description="I'll give you a cute random image of a kitsune!")
+    @app_commands.command(name="kitsune", description="I'll give you a random image of a kitsune!")
     async def kitsune(self, interaction: discord.Interaction):
 
         helpers.nekos_gif = 'kitsune'
@@ -108,6 +108,7 @@ class Image(commands.Cog):
         await interaction.response.send_message(embed=ImgEmbed.embed)
 
     # Image Search
+    @app_commands.command(name='imgsearch', description="----")
 
 
 # Realiza o registro da classe nos cogs
