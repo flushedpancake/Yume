@@ -1,34 +1,35 @@
 # Yume Bot
 
-Yume is a discord bot with the focus of being able to do a bit of everything, but focused on entertainment commands.
+Yume is a Discord bot focused on being able to do a little bit of everything, with an emphasis on entertainment and fun commands.
 
-Currently, Yume is entirely build with focus to work using the discord slash commands or application commands. With a vast variety of commands planned to be made in the near and far future, as a long plan development might be possible.
+Yume has been entirely built with the new Discord slash commands in mind.
 
-You can also see all the planned commands and their development status by clicking [HERE](https://github.com/users/AkkoS2/projects/12/views/1).
+You can see all the planned commands (and their development status) [here](https://github.com/users/AkkoS2/projects/12/views/1).
+
+## Invite
+The invite link is currently not public.
 
 ## Self-hosting
-You are 100% allowed to have a self-hosted version of Yume under the following circumstances:
-- Your self-hosted instance **MUST be PRIVATE**.
-- Your self-hosted instance must not be listed on any sort of public bot listing.
+You are allowed to have a self-hosted version of Yume under the following circumstances:
+
+- Your self-hosted instance **must be private**.
+- Your self-hosted instance must not be listed on any public bot listing.
 
 ## WIKI
-Soon™ (I'm still planning it)
+Soon&trade;
 
 ## Changelog
-- Fixed embeds.
-- Fixed dogs command.
-- Fixed currency command.
-- New command using Twitter Wordware Ai.
-- Fixed typos.
 
-## Have a suggestion?
-If you have any suggestions or ideas for new commands, you can tell them to me and I will analyze then carefully. Thanks for the attention!
+## Contributing
+Feel free to suggest any potential ideas, or report any issues/problems you have, on the GitHub issue tracker. This makes it easier to keep track of things :)
+Additional, individual contributions through pull requests are always welcomed and will be looked at, too (and may also get you a special mention in this README if it's notable...)
 
-## DISCLAIMER
+## Disclaimer
 
-- I do not own any rights to the images utilized here, all images are propriety of their own artists, I don't plan to use them to make any profit.
-- If you are the owner of one or, some of the images and, want them removed, please send a message to me and It will be done right away.
+- We do not own any rights to third-party media (photos, images, etc.) utilised by the bot. These are the property of their own artists and/or intellectual property owners, and are thus subject to any additional legal binding(s) that may come with them.
+- If you are the owner of any media in use by the bot and object to its use, please either file an issue on GitHub or send *nynim* a message on Discord.
+- We are *not* responsible for content provided by any third-party APIs that the bot uses.
 
-### Many Thanks To:
+### Special Thanks:
 
-- [Thomas Reggi](https://github.com/reggi)! for allowing me to use your fortune cookie list.
+- [Thomas Reggi](https://github.com/reggi) - for allowing me to use your fortune cookie list.
